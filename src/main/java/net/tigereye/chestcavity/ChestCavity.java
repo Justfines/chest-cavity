@@ -8,7 +8,7 @@ import net.minecraft.item.Items;
 import net.tigereye.chestcavity.components.CCComponent;
 import net.tigereye.chestcavity.components.InventoryComponent;
 import net.tigereye.chestcavity.items.*;
-import net.tigereye.chestcavity.listeners.LootTableRegister;
+import net.tigereye.chestcavity.listeners.LootRegister;
 import nerdhub.cardinal.components.api.ComponentRegistry;
 import nerdhub.cardinal.components.api.ComponentType;
 import nerdhub.cardinal.components.api.event.EntityComponentCallback;
@@ -35,9 +35,9 @@ public class ChestCavity implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		//Register mod resources
-		RegisterItems.register();
+		CC_Items.register();
 		EntityComponentCallback.event(PlayerEntity.class).register((player, components) -> components.put(INVENTORYCOMPONENT, new CCComponent(player)));
-		LootTableRegister.register();
+		LootRegister.register();
 
 		
 
