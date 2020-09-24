@@ -27,11 +27,11 @@ public class ChestCavity implements ModInitializer {
 
 	public static final ItemGroup CC_ITEM_GROUP = FabricItemGroupBuilder.build(
 			new Identifier("chestcavity", "general"),
-			() -> new ItemStack(RegisterItems.chest_opener));
+			() -> new ItemStack(CCItems.CHEST_OPENER));
 
 	public static final ItemGroup CC_FOOD_GROUP = FabricItemGroupBuilder.build(
 			new Identifier("chestcavity", "edible"),
-			() -> new ItemStack(RegisterItems.rawOrganMeat));
+			() -> new ItemStack(CCItems.RAW_ORGAN_MEAT));
 
 
 	@Override
